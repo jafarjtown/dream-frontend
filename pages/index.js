@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Header from '../components/header/Header'
 import Post from '../components/post/Post'
 import Story from '../components/story/Story'
-export default function Home({ posts, stories }) {
+export default function Home({ posts }) {
   const [post, setpost] = useState(posts.results)
   useEffect(() => {
     const postBottom = document.querySelector('#last')
@@ -27,8 +27,8 @@ export default function Home({ posts, stories }) {
   
       <div className='stories'>
         {
-          stories.results.map(( story) => {
-            return <Story key={story.id} story={ story }/>
+          [1,1,1,1,1,1].map(( story, key) => {
+            return <Story key={key} story={ story }/>
           })
         }
       </div>
@@ -47,24 +47,24 @@ export default function Home({ posts, stories }) {
 }
 
 export async function getStaticProps() {
-  const post = await fetch('http://localhost:8000/api/post/posts/', {
+  const post = await fetch('http://jafaruidris.pythonanywhere.com/api/post/posts/', {
     method: 'GET',
     headers: {
       'Authorization': `Token 7cecbddec612c49cf423a6126d21bb95a5f9b486`
   }
   })
-  const story = await fetch('http://localhost:8000/api/post/story/', {
-    method: 'GET',
-    headers: {
-      'Authorization': `Token 7cecbddec612c49cf423a6126d21bb95a5f9b486`
-  }
-  })
+//   const story = await fetch('http://localhost:8000/api/post/story/', {
+//     method: 'GET',
+//     headers: {
+//       'Authorization': `Token 7cecbddec612c49cf423a6126d21bb95a5f9b486`
+//   }
+//   })
   const posts = await post.json()
-  const stories = await story.json()
+//   const stories = await story.json()
   return {
     props: {
       posts,
-      stories
+//       stories
     }
   }
 }
