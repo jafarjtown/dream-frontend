@@ -46,7 +46,7 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(context)  {
   const post = await fetch('http://jafaruidris.pythonanywhere.com/api/post/posts/', {
     method: 'GET',
     headers: {
