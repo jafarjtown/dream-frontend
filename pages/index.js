@@ -12,7 +12,7 @@ export default function Home({ posts }) {
 export const getServerSideProps = async (context) => {
   let res = await axios.get('http://localhost:8000/api/post/posts/', {
     headers: {
-      'Authorization': 'Token 7cecbddec612c49cf423a6126d21bb95a5f9b486'
+      'Authorization': 'Token 832cb1cd014c37a04327a0b12ee29086e930df14'
     }
   })
   let posts = await res.data
