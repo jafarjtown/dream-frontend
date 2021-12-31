@@ -1,42 +1,51 @@
-import {
-	IoAlbumsOutline,
-	IoApps,
-	IoChatbubbleEllipsesOutline,
-	IoHomeOutline,
-	IoLibraryOutline,
-	IoPeople,
-	IoPersonCircleOutline,
-	IoSearchOutline,
-} from "react-icons/io5";
+import styles from '../../styles/Header.module.css'
+import { IoApps, IoCartOutline, IoHomeOutline, IoNotificationsOutline, IoSchoolOutline, IoSearch, IoTrashBinOutline } from 'react-icons/io5'
 import Link from 'next/link'
 export default function Header() {
 	return (
-		<div className="header">
-            <div className="header_top">
-                <Link href='/library' passHref>
-                <IoLibraryOutline />
-                </Link>
-				<div className='header_search'>
-					<input type="search" />
-					<IoSearchOutline />
-                </div>
-                <Link href='/me' passHref={false}>
-				<IoPersonCircleOutline />
-                </Link>
+		<div className={styles.header}>
+			<div className={styles.right}>
+				<div className={styles.site_name}>
+					Dream
+				</div>
+				<div className={styles.search_div}>
+					<input type='text' name='search_text' />
+					<button>
+						<IoSearch />
+					</button>
+				</div>
 			</div>
-            <div className="header_bottom">
-                <Link href='/'><IoHomeOutline /></Link>
-                
-                <Link href='/chat' passHref><IoChatbubbleEllipsesOutline /></Link>
-                <Link href='/friends' passHref><IoPeople /></Link>
-				
-                
-                <Link href='/files' passHref><IoAlbumsOutline /></Link>
-                
-                
-                <Link href='/apps' passHref><IoApps /></Link>
-                
-				
+			<div className={styles.left}>
+				<div className={styles.subs}>
+					Subscribers 100+
+				</div>
+				<div className={styles.navs}>
+					<Link href='/' passHref>
+						<IoHomeOutline />
+					</Link>
+					<Link href={'/trash'} passHref>
+						<IoTrashBinOutline />
+					</Link>
+					<Link href={'/notifications'} passHref>
+						<IoNotificationsOutline />
+					</Link>
+					<Link href={'/cart'} passHref>
+						<IoCartOutline />
+					</Link>
+					<Link href={'/institutions'} passHref>
+						<IoSchoolOutline />
+					</Link>
+				</div>
+				<div className={styles.user}>
+					<div className={styles.apps}>
+						<Link href={'/apps'} passHref>
+							<IoApps />
+						</Link>
+					</div>
+					<div className={styles.avatar}>
+						<img className={styles.img} src='' alt='' loading='lazy'/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
