@@ -33,7 +33,7 @@ export default function index({ institutions }) {
 }
 
 export const getServerSideProps = async (context) => {
-    const data = await axios.get('http://localhost:8000/api/institution/institutions', {
+    const data = await axios.get('http://jafaruidris.pythonanywhere.com/api/institution/institutions', {
         headers: {
             'Authorization': 'Token 832cb1cd014c37a04327a0b12ee29086e930df14'
         }
