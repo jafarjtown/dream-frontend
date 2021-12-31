@@ -1,0 +1,103 @@
+.post{
+    width: 600px;
+    box-shadow: 0 0 1.5px lightgray;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.posts{
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.header{
+    width: 100%;
+    box-shadow: 0px 0px 1px lightgrey;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.header button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.header div{
+    width: max-content;
+}
+.wrapper{
+    display: flex;
+    padding: 3px;
+    position: relative;
+}
+.avatar_user img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.name_user{
+    margin: 2px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.related{
+    position: absolute;
+    bottom: 4px;
+    left: 27px;
+    display: flex;
+    align-items: flex-end;
+}
+.related img{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: white;
+}
+.related span{
+    font-size: 11px;
+    color: rgb(185, 184, 184);
+    margin: 2px 4px;
+    word-break: keep-all;
+}
+.related span > svg{
+    color: black;
+}
+.badge{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: smaller;
+    color: gray;
+}
+.media{
+    width: 100%;
+    object-fit: contain;
+}
+.paragraph{
+    padding: 5px;
+    font-size: medium;
+    text-decoration: solid;
+    max-height: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.footer button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

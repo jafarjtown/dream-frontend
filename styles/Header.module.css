@@ -1,0 +1,88 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.right, .left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.left{
+    justify-content: space-between;
+
+}
+.site_name{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.search_div{
+    flex: 1;
+    display: flex;
+    border: 3px solid transparent;
+    outline: 1px solid rgb(48, 103, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 2px;
+}
+.search_div input{
+    padding: 5px 10px;
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+.search_div button{
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-size: medium;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+}
+.search_div button:hover{
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background-color: rgb(48, 103, 255);
+    color: white;
+    font-weight: 600;
+    transform: rotate(90deg);
+}
+.subs{
+    padding: 0 20px;
+
+}
+.navs{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    cursor: pointer;
+}
+.img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.user{
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+}
+.apps{
+    margin-right: 5px;
+}

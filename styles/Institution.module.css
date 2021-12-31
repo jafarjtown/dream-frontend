@@ -1,0 +1,98 @@
+.institutions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.institution {
+    width: 250px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 5px 10px;
+}
+
+.info p {
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.info small {
+    color: gray;
+}
+
+.info a {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-top: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.inst{
+    width: 70%;
+    margin: auto;
+}
+.cover_img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.logo_img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    bottom: -90px;
+    left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: .5px solid;
+}
+.header{
+    position: relative;
+}
+.name{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: xx-large;
+    margin-left: 230px;
+}
+.name small{
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+.name button{
+    padding: 10px;
+    border: none;outline: none;
+    color: white;
+    background-color: rgb(42, 100, 224);
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+    border-bottom: .5px solid;
+}
+.nav *{
+    text-decoration: none;
+    color: black;
+}
+.nav a, .nav > div{
+    cursor: pointer;
+}
+.body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
