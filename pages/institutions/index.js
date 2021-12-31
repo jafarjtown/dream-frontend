@@ -35,7 +35,7 @@ export default function index({ institutions }) {
 export const getServerSideProps = async (context) => {
     const data = await axios.get('http://localhost:8000/api/institution/institutions', {
         headers: {
-            'Authorization': 'Token 7cecbddec612c49cf423a6126d21bb95a5f9b486'
+            'Authorization': 'Token 832cb1cd014c37a04327a0b12ee29086e930df14'
         }
     })
     const result = await data.data || []
