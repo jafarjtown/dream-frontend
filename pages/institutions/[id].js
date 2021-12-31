@@ -16,7 +16,7 @@ export default function Index() {
         const fetchData = async () => {
             if (id !== undefined) {
                 const res = await axios.get(
-                    `http://localhost:8000/api/institution/institutions/${id}`,
+                    `http://jafaruidris.pythonanywhere.com/api/institution/institutions/${id}`,
                     {
                         headers: {
                             Authorization: "Token 832cb1cd014c37a04327a0b12ee29086e930df14",
@@ -27,7 +27,7 @@ export default function Index() {
                 const data = await res.data;
 
                 setInstitution(data)
-                const postres = await axios.get(`http://localhost:8000/api/institution/institutionsblogs/${id}`,{
+                const postres = await axios.get(`http://jafaruidris.pythonanywhere.com/api/institution/institutionsblogs/${id}`,{
                     headers: {
                         Authorization: "Token 832cb1cd014c37a04327a0b12ee29086e930df14",
                     },
